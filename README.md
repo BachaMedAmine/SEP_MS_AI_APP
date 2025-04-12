@@ -42,5 +42,22 @@ git clone https://github.com/<your-username>/ms-pim-ai.git
 cd ms-pim-ai
 
 
-firebase_core: ^3.4.0
-firebase_messaging: ^15.1.0
+2. Set Up the Backend (Flask AI Server)
+cd backend
+-Create a Virtual Environment:
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+3:
+Install Dependencies:
+pip install -r requirements.txt
+
+4:Run the Flask Server:
+python server.py
+
+
+***Set Up the Frontend (Flutter App):
+cd frontend
+
+2:Install Flutter Dependencies:
+

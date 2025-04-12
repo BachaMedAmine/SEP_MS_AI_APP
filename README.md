@@ -60,4 +60,50 @@ python server.py
 cd frontend
 
 2:Install Flutter Dependencies:
+flutter pub get
 
+Set Up Firebase for Push Notifications:
+Create a Firebase project in the Firebase Console.
+Add an iOS app to your Firebase project:
+Use the bundle ID com.exampleorwhatever.msPimAi (or your own if you’ve changed it).
+Download the GoogleService-Info.plist file and place it in frontend/ios/Runner/.
+Add an Android app to your Firebase project (optional, if targeting Android):
+Use the package name com.bechamedamine.msPimAi.
+Download the google-services.json file and place it in frontend/android/app/.
+Follow the Firebase setup instructions for Flutter:
+Add Firebase dependencies to frontend/pubspec.yaml (already included in the project):
+
+firebase_core: ^3.4.0
+firebase_messaging: ^15.1.0
+
+
+For iOS, ensure Push Notifications and Background Modes (with "Remote notifications") are enabled in Xcode (frontend/ios/Runner.xcodeproj).
+For iOS, upload an APNS certificate or APNS Authentication Key to Firebase (Cloud Messaging > APNs Certificates).
+
+NOW RUN IT
+
+
+Contributing
+We welcome contributions to make MS-PIM-AI more efficient and robust! Here are some areas where you can help:
+
+Frontend (Flutter):
+Improve the UI/UX of the health dashboard.
+Add real-time health data collection (e.g., from wearables like Apple Watch).
+Optimize performance for large datasets or frequent predictions.
+Enhance error handling for network failures.
+Backend (Flask AI Server):
+Improve the machine learning model (relapse_predictor.pkl) by retraining with more data or using a different algorithm.
+Add feature scaling or preprocessing to ensure consistent predictions.
+Implement authentication for the /predict endpoint.
+Deploy the Flask server with a production-ready setup (e.g., Gunicorn + Nginx, HTTPS).
+General:
+Add support for Android push notifications.
+Implement a backend endpoint to store FCM tokens and send push notifications when a high relapse risk is detected.
+Add unit tests for both the frontend and backend.
+To contribute:
+
+Fork the repository.
+Create a new branch (git checkout -b feature/your-feature).
+Make your changes and commit them (git commit -m "Add your feature").
+Push to your fork (git push origin feature/your-feature).
+Open a pull request with a description of your changes.

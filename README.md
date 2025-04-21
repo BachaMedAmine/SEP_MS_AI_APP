@@ -38,7 +38,7 @@ source venv/bin/activate
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<bechamedamine>/ms-pim-ai.git
+git clone https://github.com/BachaMedAmine/SEP_MS_AI_APP.git
 cd ms-pim-ai
 
 
